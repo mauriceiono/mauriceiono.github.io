@@ -1,46 +1,48 @@
-/*Structure */
+
+/* Structure */
 body {
-    background: #FF00FF;
-    font-family: Arial, Helvetica, sans-serif;
+    background:#513416;
+    font-family:Arial, Helvetica, sans-serif;
 }
+
 #content {
-    background:   #228B22;
+    background:#EFDAC3;
     padding:5px;
-    margin: 20px auto; 
-    width:  70%;
-    border-radius: 10px;
-
+    margin:20px auto;
+    width:70%;
+    border-radius:10px;
 }
-/* navigation */ 
+
+/* Navigation */
 #main-nav ul {
-    padding-left: 0; /*remove left padding
-
+    padding-left:0; /* removes the left padding */
 }
-
 
 #main-nav li {
-    list-style-type: none; /* no bullets */
-    display: inline-block; /* appear on one line */
+    list-style-type: none;  /* no bullets */
+    display:inline-block;   /* appear on one line */
 }
 
-
-#main-nav a{
-    text-decoration: none; /* gets rid of underline */
-    background: grey;
-    color: white
+#main-nav a { 
+    text-decoration: none;  /* no underline */
+    background:#FF8DA1;
+    color:white;
+    padding:5px;
+    margin:5px;
+    border-radius:2px;
 }
 
- #main-nav a:hover {
-    background: black;
-    color:#228B22
- }
- 
+#main-nav a:hover {
+    background:black;
+    color:#FF8DA1;
+}
+
 
 /* Typography */
 h1 {
-    color: #FFD700;
+    color:#4B6758;
 }
 
 p {
-    color: ;
+    color:#281A0B;
 }
