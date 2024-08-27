@@ -1,0 +1,46 @@
+/*Structure */
+body {
+    background: #FF00FF;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#content {
+    background:   #228B22;
+    padding:5px;
+    margin: 20px auto; 
+    width:  70%;
+    border-radius: 10px;
+
+}
+/* navigation */ 
+#main-nav ul {
+    padding-left: 0; /*remove left padding
+
+}
+
+
+#main-nav li {
+    list-style-type: none; /* no bullets */
+    display: inline-block; /* appear on one line */
+}
+
+
+#main-nav a{
+    text-decoration: none; /* gets rid of underline */
+    background: grey;
+    color: white
+}
+
+ #main-nav a:hover {
+    background: black;
+    color:#228B22
+ }
+ 
+
+/* Typography */
+h1 {
+    color: #FFD700;
+}
+
+p {
+    color: ;
+}
