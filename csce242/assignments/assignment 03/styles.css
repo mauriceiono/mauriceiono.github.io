@@ -1,0 +1,233 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e0f7fa; /* Light cyan background */
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    background-color: #b2dfdb; /* Light teal background */
+    color: #004d40;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #80cbc4; /* Subtle border for separation */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-family: 'Georgia', serif;
+}
+
+/* Navigation Styles */
+nav {
+    background-color: #004d40; /* Dark teal background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: #ffffff; /* White text */
+    text-decoration: none;
+    padding: 15px 30px;
+    display: block;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #00332d; /* Darker teal hover effect */
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+/* Main Content and Sidebar Container */
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Section (Main Content) Styles */
+section {
+    flex: 3 1 70%;
+    background-color: #b2dfdb; /* Light teal background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar Styles */
+aside {
+    flex: 1 1 30%;
+    background-color: #004d40; /* Dark teal background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar Links */
+.sidebar-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-links li a {
+    text-decoration: none;
+    color: #ffffff;
+    display: block;
+    padding: 10px 0;
+    transition: background-color 0.3s;
+}
+
+.sidebar-links li a:hover {
+    background-color: #00332d; /* Darker teal hover effect */
+    border-radius: 5px;
+}
+
+/* Article Grid Styles */
+.content-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+article {
+    flex: 1 1 calc(25% - 20px);
+    background-color: #b2dfdb; /* Light teal background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+article img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+article h2 {
+    margin: 0 0 10px 0;
+    font-size: 1.5em;
+    color: #004d40;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #b2dfdb; /* Light teal background */
+    color: #004d40;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    border-top: 2px solid #80cbc4; /* Subtle border for separation */
+}
+
+/* Big Ideas Section */
+.big-ideas {
+    padding: 20px;
+    background-color: #a7ffeb; /* Very light teal background */
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 2px solid #00bfae; /* Teal border */
+}
+
+.big-ideas h2 {
+    margin-top: 0;
+    color: #004d40; /* Dark teal text */
+}
+
+.big-ideas-row {
+    display: flex;
+    gap: 20px;
+}
+
+.big-idea {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.big-idea img {
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+}
+
+.big-idea p {
+    margin: 0;
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        padding: 0;
+    }
+
+    .container {
+        flex-direction: column;
+        padding: 0 10px;
+    }
+
+    section {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .content-row {
+        flex-direction: column;
+    }
+
+    article {
+        flex: 1 1 100%;
+    }
+
+    aside {
+        margin: 0 0 20px 0;
+        width: 100%;
+        padding: 10px;
+    }
+
+    footer {
+        position: static;
+    }
+
+    .big-ideas-row {
+        flex-direction: column;
+    }
+
+    .big-idea {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .big-idea img {
+        margin-bottom: 10px;
+    }
+}

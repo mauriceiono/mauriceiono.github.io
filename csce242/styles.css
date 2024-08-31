@@ -1,0 +1,130 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f4f6;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    margin: 0;
+    font-style: italic;
+    color: #666;
+}
+
+/* Main content styles */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Introduction section */
+.intro {
+    margin-bottom: 20px;
+}
+
+.intro p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Assignments section */
+.assignments {
+    margin-top: 20px;
+}
+
+.assignments h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #333;
+}
+
+/* Assignment cards */
+.assignment-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.assignment {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    padding: 15px;
+    flex: 1 1 calc(33% - 20px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.assignment h3 {
+    margin-top: 0;
+    font-size: 1.2rem;
+}
+
+.assignment img {
+    width: 300px;
+    height: 150px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+}
+
+.assignment p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.assignment a {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.assignment a:hover {
+    background-color: #0056b3;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    background-color: #fff;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .assignment-list {
+        flex-direction: column; /* Stack assignments vertically on smaller screens */
+    }
+
+    .assignment {
+        flex: 1 1 100%;
+        margin-bottom: 20px; /* Add spacing between assignments */
+    }
+
+    header, main, footer {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
