@@ -1,28 +1,30 @@
-/* General styles */
+/* Structure*/
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f3f4f6;
-    color: #333;
+    background-color: #0d1117; 
+    color: #c9d1d9; 
 }
 
+/* Header styles */
 header {
     text-align: center;
-    background-color: #fff;
+    background-color: #161b22; 
     padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); 
 }
 
 header h1 {
     margin: 0;
     font-size: 2.5rem;
+    color: #58a6ff; 
 }
 
 header p {
     margin: 0;
     font-style: italic;
-    color: #666;
+    color: #8b949e; 
 }
 
 /* Main content styles */
@@ -40,6 +42,7 @@ main {
 .intro p {
     font-size: 1.1rem;
     line-height: 1.6;
+    color: #c9d1d9; 
 }
 
 /* Assignments section */
@@ -51,7 +54,7 @@ main {
     text-align: center;
     margin-bottom: 20px;
     font-size: 2rem;
-    color: #333;
+    color: #58a6ff; 
 }
 
 /* Assignment cards */
@@ -63,24 +66,27 @@ main {
 }
 
 .assignment {
-    background-color: #f8f9fa;
-    border: 1px solid #ddd;
+    background-color: #161b22; 
+    border: 1px solid #30363d; 
     padding: 15px;
     flex: 1 1 calc(33% - 20px);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); 
     text-align: center;
+    color: #c9d1d9;
 }
 
 .assignment h3 {
     margin-top: 0;
     font-size: 1.2rem;
+    color: #58a6ff; 
 }
 
 .assignment img {
     width: 300px;
     height: 150px;
     margin: 10px 0;
-    border: 1px solid #ccc;
+    border: 1px solid #30363d; 
+    border-radius: 5px; 
 }
 
 .assignment p {
@@ -92,7 +98,7 @@ main {
 .assignment a {
     display: inline-block;
     padding: 8px 15px;
-    background-color: #007bff;
+    background-color: #58a6ff; 
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
@@ -100,27 +106,28 @@ main {
 }
 
 .assignment a:hover {
-    background-color: #0056b3;
+    background-color: #1f6feb;
 }
 
 /* Footer styles */
 footer {
     text-align: center;
-    background-color: #fff;
+    background-color: #161b22; 
     padding: 10px;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid #30363d; 
     margin-top: 20px;
+    color: #c9d1d9; 
 }
 
 /* Media Queries */
 @media screen and (max-width: 768px) {
     .assignment-list {
-        flex-direction: column; /* Stack assignments vertically on smaller screens */
+        flex-direction: column; 
     }
 
     .assignment {
         flex: 1 1 100%;
-        margin-bottom: 20px; /* Add spacing between assignments */
+        margin-bottom: 20px; 
     }
 
     header, main, footer {

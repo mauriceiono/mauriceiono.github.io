@@ -1,19 +1,19 @@
-/* General Styles */
+/* Structure */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #e0f7fa; /* Light cyan background */
+    background-color: #e0f7fa; 
     line-height: 1.6;
 }
 
 /* Header Styles */
 header {
-    background-color: #b2dfdb; /* Light teal background */
+    background-color: #b2dfdb; 
     color: #004d40;
     padding: 20px;
     text-align: center;
-    border-bottom: 2px solid #80cbc4; /* Subtle border for separation */
+    border-bottom: 2px solid #80cbc4; 
 }
 
 header h1 {
@@ -24,7 +24,7 @@ header h1 {
 
 /* Navigation Styles */
 nav {
-    background-color: #004d40; /* Dark teal background */
+    background-color: #004d40; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -41,7 +41,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #ffffff; /* White text */
+    color: #ffffff; 
     text-decoration: none;
     padding: 15px 30px;
     display: block;
@@ -50,7 +50,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #00332d; /* Darker teal hover effect */
+    background-color: #00332d; 
     color: #ffffff;
     border-radius: 5px;
 }
@@ -66,7 +66,7 @@ nav ul li a:hover {
 /* Section (Main Content) Styles */
 section {
     flex: 3 1 70%;
-    background-color: #b2dfdb; /* Light teal background */
+    background-color: #b2dfdb; 
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -75,7 +75,7 @@ section {
 /* Sidebar Styles */
 aside {
     flex: 1 1 30%;
-    background-color: #004d40; /* Dark teal background */
+    background-color: #004d40; 
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -97,7 +97,7 @@ aside {
 }
 
 .sidebar-links li a:hover {
-    background-color: #00332d; /* Darker teal hover effect */
+    background-color: #00332d; 
     border-radius: 5px;
 }
 
@@ -110,7 +110,7 @@ aside {
 
 article {
     flex: 1 1 calc(25% - 20px);
-    background-color: #b2dfdb; /* Light teal background */
+    background-color: #b2dfdb; 
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -137,28 +137,28 @@ article h2 {
 
 /* Footer Styles */
 footer {
-    background-color: #b2dfdb; /* Light teal background */
+    background-color: #b2dfdb;
     color: #004d40;
     text-align: center;
     padding: 15px;
     position: fixed;
     width: 100%;
     bottom: 0;
-    border-top: 2px solid #80cbc4; /* Subtle border for separation */
+    border-top: 2px solid #80cbc4; 
 }
 
 /* Big Ideas Section */
 .big-ideas {
     padding: 20px;
-    background-color: #a7ffeb; /* Very light teal background */
+    background-color: #a7ffeb; 
     margin-bottom: 20px;
     border-radius: 10px;
-    border: 2px solid #00bfae; /* Teal border */
+    border: 2px solid #00bfae;
 }
 
 .big-ideas h2 {
     margin-top: 0;
-    color: #004d40; /* Dark teal text */
+    color: #004d40; 
 }
 
 .big-ideas-row {
