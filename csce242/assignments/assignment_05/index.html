@@ -3,27 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment 7</title>
+    <title>Assignment 5</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
+        <!-- Count Column -->
         <div class="column count-column" id="count-column" onclick="incrementCount()">
             <h3>Count</h3>
             <p id="count">0</p>
         </div>
+
+        <!-- Random Image Column -->
         <div class="column image-column">
             <h3>Random Image</h3>
             <a href="https://picsum.photos/200" target="_blank">
                 <img id="random-image" src="https://picsum.photos/200" alt="Random Image" onclick="refreshImage()">
             </a>
-            <p>@portiaplante.com</p>
+            <p>@mauriciono.com</p>
         </div>
+
+        <!-- Slider Move Column -->
         <div class="column slider-column">
             <h3>Slider Move</h3>
-            <input type="range" min="0" max="200" value="100" id="slider" class="slider">
+            <input type="range" min="0" max="200" value="0" id="slider" class="slider" oninput="moveSquare()">
             <div class="slider-box">
-                <div class="slider-content"></div>
+                <div id="square" class="slider-content"></div>
             </div>
         </div>
     </div>
