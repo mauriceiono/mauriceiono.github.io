@@ -1,14 +1,139 @@
-/* Navigation styles */
-nav {
-    margin-top: 10px;
+/* Structure*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0d1117; 
+    color: #c9d1d9; 
 }
 
-nav a {
-    margin-right: 15px;
-    color: #58a6ff;
+/* Header styles */
+header {
+    text-align: center;
+    background-color: #161b22; 
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); 
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #58a6ff; 
+}
+
+header p {
+    margin: 0;
+    font-style: italic;
+    color: #8b949e; 
+}
+
+/* Main content styles */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Introduction section */
+.intro {
+    margin-bottom: 20px;
+}
+
+.intro p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #c9d1d9; 
+}
+
+/* Assignments section */
+.assignments {
+    margin-top: 20px;
+}
+
+.assignments h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #58a6ff; 
+}
+
+/* Assignment cards */
+.assignment-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.assignment {
+    background-color: #161b22; 
+    border: 1px solid #30363d; 
+    padding: 15px;
+    flex: 1 1 calc(33% - 20px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); 
+    text-align: center;
+    color: #c9d1d9;
+}
+
+.assignment h3 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    color: #58a6ff; 
+}
+
+.assignment img {
+    width: 300px;
+    height: 150px;
+    margin: 10px 0;
+    border: 1px solid #30363d; 
+    border-radius: 5px; 
+}
+
+.assignment p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.assignment a {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #58a6ff; 
+    color: #fff;
     text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
 }
 
-nav a:hover {
-    text-decoration: underline;
+.assignment a:hover {
+    background-color: #1f6feb;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    background-color: #161b22; 
+    padding: 10px;
+    border-top: 1px solid #30363d; 
+    margin-top: 20px;
+    color: #c9d1d9; 
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .assignment-list {
+        flex-direction: column; 
+    }
+
+    .assignment {
+        flex: 1 1 100%;
+        margin-bottom: 20px; 
+    }
+
+    header, main, footer {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    
 }
