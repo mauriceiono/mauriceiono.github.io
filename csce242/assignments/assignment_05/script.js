@@ -11,16 +11,22 @@ function refreshImage() {
     }, 500); // Timeout is optional for smoother transition
 }
 
-function moveSquare() {
+function moveBox() {
     const slider = document.getElementById('slider');
-    const square = document.getElementById('square');
+    const sliderBox = document.getElementById('slider-box');
+    const sliderColumn = document.querySelector('.slider-column');
+
     const maxSliderValue = slider.max;
     const sliderValue = slider.value;
 
-    // Calculate the proportional left value
-    const maxBoxWidth = 200 - 50; // slider-box width (200px) - square width (50px)
-    const leftValue = (sliderValue / maxSliderValue) * maxBoxWidth;
+    // Calculate the maximum movement allowed (slider-column width - slider-box width)
+    const maxBoxWidth = sliderColumn.offsetWidth - sliderBox.offsetWidth;
+    const translateX = (sliderValue / maxSliderValue) * maxBoxWidth;
 
-    // Set the square's left position
-    square.style.left = `${leftValue}px`;
+    // Set the box's transform translateX position
+    sliderBox.style.transform = `translateX(${translateX}px)`;
 }
+
+
+
+

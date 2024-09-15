@@ -69,4 +69,25 @@ body {
     .container {
         grid-template-columns: 1fr;
     }
+
+
+
+    .slider-column {
+        position: relative;
+        width: 200px; /* Ensure this matches the width of slider-box */
+        height: 200px; /* Ensure this matches the height of slider-box */
+        overflow: hidden; /* Prevent box from overflowing the container */
+    }
+    
+    .slider-box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50px; /* Width of the slider-box */
+        height: 50px; /* Height of the slider-box */
+        background-color: #d87070;
+        transition: transform 0.2s ease;
+    }
+
+
 }
