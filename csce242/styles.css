@@ -59,9 +59,8 @@ main {
 
 /* Assignment cards */
 .assignment-list {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
     gap: 20px;
 }
 
@@ -69,7 +68,7 @@ main {
     background-color: #161b22; 
     border: 1px solid #30363d; 
     padding: 15px;
-    flex: 1 1 calc(33% - 20px);
+    max-width: 100%; /* Ensure it spans the grid column */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); 
     text-align: center;
     color: #c9d1d9;
@@ -83,7 +82,7 @@ main {
 
 .assignment img {
     width: 300px;
-    height: 150px;
+    height: auto;
     margin: 10px 0;
     border: 1px solid #30363d; 
     border-radius: 5px; 

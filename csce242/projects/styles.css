@@ -69,7 +69,7 @@ main {
     background-color: #161b22; 
     border: 1px solid #30363d; 
     padding: 15px;
-    flex: 1 1 calc(33% - 20px);
+    flex: 1 1 calc(32% - 20px);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); 
     text-align: center;
     color: #c9d1d9;
