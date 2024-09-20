@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 8</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Assignment 8</h1>
+        <h2>If Statements</h2>
+        
+        <nav>
+            <a href="#" id="exercise1-link">Exercise 1</a> |
+            <a href="#" id="exercise2-link">Exercise 2</a>
+        </nav>
+
+        <!-- Color Slider Section -->
+        <div id="color-slider-section" class="exercise-section">
+            <h3>Color Slider</h3>
+            <input type="range" id="color-slider" min="0" max="255" value="0">
+            <p id="color-message"></p>
+        </div>
+
+        <!-- Picture Chooser Section -->
+        <div id="picture-chooser-section" class="exercise-section" style="display:none;">
+            <h3>Picture Chooser</h3>
+            <button class="image-btn" data-size="100">Small</button>
+            <button class="image-btn" data-size="200">Medium</button>
+            <button class="image-btn" data-size="600">Large</button>
+            <div id="image-container"></div>
+        </div>
+        
+        <footer>
+            <p>@mauriciono.com</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

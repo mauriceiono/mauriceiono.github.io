@@ -3,38 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment 8</title>
+    <title>Assignment 5</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Assignment 8</h1>
-        <h2>If Statements</h2>
-        <nav>
-            <a href="#" id="exercise1-link">Exercise 1</a> |
-            <a href="#" id="exercise2-link">Exercise 2</a>
-        </nav>
-
-        <!-- Color Slider Section -->
-        <div id="color-slider-section" class="exercise-section">
-            <h3>Color Slider</h3>
-            <input type="range" id="color-slider" min="0" max="255" value="0">
-            <p id="color-message"></p>
+        <!-- Count Column -->
+        <div class="column count-column" id="count-column" onclick="incrementCount()">
+            <h3>Count</h3>
+            <p id="count">0</p>
         </div>
 
-        <!-- Picture Chooser Section -->
-        <div id="picture-chooser-section" class="exercise-section" style="display:none;">
-            <h3>Picture Chooser</h3>
-            <button class="image-btn" data-size="100">Small</button>
-            <button class="image-btn" data-size="200">Medium</button>
-            <button class="image-btn" data-size="600">Large</button>
-            <div id="image-container"></div>
-        </div>
-        
-        <footer>
+        <!-- Random Image Column -->
+        <div class="column image-column">
+            <h3>Random Image</h3>
+                <img id="random-image" src="https://picsum.photos/200" alt="Random Image" onclick="refreshImage()">
             <p>@mauriciono.com</p>
-        </footer>
+        </div>
+
+        <!-- Slider Move Column -->
+        <div class="column slider-column">
+            <h3>Slider Move</h3>
+            <input type="range" min="0" max="200" value="0" id="slider" class="slider" oninput="moveBox()">
+            <div class="slider-box" id="slider-box"></div>
+        </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>

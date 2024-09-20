@@ -1,13 +1,7 @@
-/* Common Styling */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5dc;
+    background-color: #f5f5f5;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,230 +9,55 @@ body {
 }
 
 .container {
-    background-color: #f0f8ff;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.column {
+    background-color: #e6e6e6;
+    border-radius: 8px;
     padding: 20px;
     text-align: center;
-    width: 350px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h1, h2 {
-    margin-bottom: 10px;
-    color: #3f6266;
+.count-column {
+    background-color: #5c7f8a;
 }
 
-h2 {
-    color: #d08c83;
+.count-column h3, .count-column p {
+    color: #fff;
 }
 
-nav a {
-    margin: 0 10px;
-    color: #3f6266;
-    text-decoration: none;
-}
-
-.exercise-section {
-    margin: 20px 0;
-    padding: 20px;
-    border: 1px solid #ccc;
-    background-color: #fffff0;
-}
-
-#color-slider-section {
-    background-color: #000000;
-    color: #ffffff;
-}
-
-input[type="range"] {
+.image-column img {
     width: 100%;
-    margin: 10px 0;
+    border-radius: 8px;
 }
 
-#color-message {
-    margin-top: 10px;
-    font-size: 16px;
+.slider-column {
+    position: relative; /* Important for positioning the slider box */
 }
 
-button.image-btn {
-    padding: 10px 15px;
-    margin: 5px;
-    border: 1px solid #3f6266;
-    background-color: #f5f5f5;
-    cursor: pointer;
-}
-
-button.image-btn:hover {
-    background-color: #dcdcdc;
-}
-
-footer {
-    margin-top: 20px;
-    color: #999;
-}
-
-#image-container img {
-    margin-top: 20px;
-    max-width: 100%;
-}
-
-/* Menu Styling */
-.menu-toggle {
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.arrow-down {
-    font-size: 1.5em;
-    display: inline-block;
-    transition: transform 0.3s ease;
-}
-
-.arrow-up {
-    transform: rotate(180deg);
-}
-
-.hidden {
-    display: none;
-}
-
-/* Menu Items always visible on large screens */
-@media screen and (min-width: 601px) {
-    #menu-items {
-        display: flex !important; /* Always show the menu on larger screens */
-    }
-}
-
-@media screen and (max-width: 600px) {
-    nav a {
-        display: block;
-        margin: 5px 0;
-    }
-    #menu-items.hidden {
-        display: none;
-    }
-}
-/* Common Styling */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5dc;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.container {
-    background-color: #f0f8ff;
-    padding: 20px;
-    text-align: center;
-    width: 350px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h1, h2 {
-    margin-bottom: 10px;
-    color: #3f6266;
-}
-
-h2 {
-    color: #d08c83;
-}
-
-nav a {
-    margin: 0 10px;
-    color: #3f6266;
-    text-decoration: none;
-}
-
-.exercise-section {
-    margin: 20px 0;
-    padding: 20px;
-    border: 1px solid #ccc;
-    background-color: #fffff0;
-}
-
-#color-slider-section {
-    background-color: #000000;
-    color: #ffffff;
-}
-
-input[type="range"] {
+.slider-column input[type="range"] {
     width: 100%;
-    margin: 10px 0;
 }
 
-#color-message {
-    margin-top: 10px;
-    font-size: 16px;
+.slider-box {
+    position: absolute;
+    
+    left: 0; /* Start at the left side */
+    width: 50px; /* Width of the slider-box */
+    height: 50px; /* Height of the slider-box */
+    background-color: #d87070;
+    transition: transform 0.2s ease;
 }
 
-button.image-btn {
-    padding: 10px 15px;
-    margin: 5px;
-    border: 1px solid #3f6266;
-    background-color: #f5f5f5;
-    cursor: pointer;
-}
 
-button.image-btn:hover {
-    background-color: #dcdcdc;
-}
-
-footer {
-    margin-top: 20px;
-    color: #999;
-}
-
-#image-container img {
-    margin-top: 20px;
-    max-width: 100%;
-}
-
-/* Menu Styling */
-.menu-toggle {
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.arrow-down {
-    font-size: 1.5em;
-    display: inline-block;
-    transition: transform 0.3s ease;
-}
-
-.arrow-up {
-    transform: rotate(180deg);
-}
-
-.hidden {
-    display: none;
-}
-
-/* Menu Items always visible on large screens */
-@media screen and (min-width: 601px) {
-    #menu-items {
-        display: flex !important; /* Always show the menu on larger screens */
-    }
-}
-
-@media screen and (max-width: 600px) {
-    nav a {
-        display: block;
-        margin: 5px 0;
-    }
-    #menu-items.hidden {
-        display: none;
+/* Mobile layout */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
     }
 }
