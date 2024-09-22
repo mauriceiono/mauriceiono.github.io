@@ -1,0 +1,128 @@
+/* CSS Variables */
+:root {
+    --primary-color: #0066cc;
+    --secondary-color: #ffffff;
+    --text-color: #333333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 15px;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+.featured-characters {
+    display: flex;
+    justify-content: center; /* Center the characters horizontally */
+    gap: 40px; /* Add more space between character cards */
+    flex-wrap: wrap; /* Wrap if too many cards */
+    margin-top: 20px;
+} 
+
+.character-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px; /* Added padding for better spacing */
+}
+
+.character-card {
+    display: inline-block; /* Allow the card to be centered */
+    margin: 20px; /* Margin around each card */
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 200px; /* Set a consistent width for all cards */
+}
+.centered {
+    text-align: center;
+}
+/* Add this section to control image sizes */
+.character-card img {
+    width: 100%; /* Set image width to fit the card */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 180px; /* Maximum width for better scaling */
+    display: block; /* Block layout for better spacing */
+    margin: 0 auto 10px; /* Center the image with margin below */
+}
+.character-details {
+    text-align: center; /* Center the text */
+    padding: 20px; /* Add padding for spacing */
+}
+.game-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.game-card {
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding: 15px;
+    width: 200px;
+    text-align: center;
+}
+.team-members {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    margin: 15px;
+    text-align: center;
+    width: 150px; /* Adjust as necessary */
+}
+
+.team-member img {
+    width: 100%; /* Makes the image responsive */
+    border-radius: 50%; /* Optional: makes images circular */
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 10px;
+}
+/* Media Queries */
+@media (max-width: 600px) {
+    .featured-characters {
+        flex-direction: column;
+        align-items: center;
+    }
+}

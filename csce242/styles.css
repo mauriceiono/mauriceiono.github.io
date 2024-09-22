@@ -107,7 +107,67 @@ main {
 .assignment a:hover {
     background-color: #1f6feb;
 }
+ /* Projects section */
+.projects {
+    margin-top: 20px;
+}
 
+.projects h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #58a6ff; 
+}
+
+/* Project cards */
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    gap: 20px;
+}
+
+.project {
+    background-color: #161b22; 
+    border: 1px solid #30363d; 
+    padding: 15px;
+    text-align: center;
+    color: #c9d1d9;
+}
+
+.project h3 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    color: #58a6ff; 
+}
+
+.project img {
+    width: 100%; /* Make images responsive */
+    height: auto;
+    max-width: 300px; /* Maintain max width */
+    margin: 10px 0;
+    border: 1px solid #30363d; 
+    border-radius: 5px; 
+}
+
+.project p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.project a {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #58a6ff; 
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.project a:hover {
+    background-color: #1f6feb;
+}
 /* Footer styles */
 footer {
     text-align: center;

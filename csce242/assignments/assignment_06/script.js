@@ -4,28 +4,36 @@ document.addEventListener("DOMContentLoaded", function() {
     const colorMessage = document.getElementById('color-message');
     const colorSliderSection = document.getElementById('color-slider-section');
     const pictureChooserSection = document.getElementById('picture-chooser-section');
-    const exercise1Link = document.getElementById('exercise1-link');
-    const exercise2Link = document.getElementById('exercise2-link');
-    const imageButtons = document.querySelectorAll('.image-btn');
-    const imageContainer = document.getElementById('image-container');
-
+    
     // Menu Elements
     const menuToggle = document.getElementById('menu-toggle');
     const menuItems = document.getElementById('menu-items');
     const arrow = document.querySelector('.arrow-down');
-
-    // Switch between Exercise 1 and Exercise 2
-    exercise1Link.addEventListener('click', function() {
+    
+    // Exercise Links (Main and Toggle Menu)
+    const exercise1LinkMain = document.getElementById('exercise1-link');
+    const exercise2LinkMain = document.getElementById('exercise2-link');
+    const exercise1LinkToggle = document.querySelector('.toggle-exercise1');
+    const exercise2LinkToggle = document.querySelector('.toggle-exercise2');
+    
+    // Function to show Exercise 1
+    function showExercise1() {
         colorSliderSection.style.display = 'block';
         pictureChooserSection.style.display = 'none';
-    });
-
-    exercise2Link.addEventListener('click', function() {
+    }
+    
+    // Function to show Exercise 2
+    function showExercise2() {
         colorSliderSection.style.display = 'none';
         pictureChooserSection.style.display = 'block';
-    });
+    }
     
-
+    // Add event listeners for both main and toggle links
+    exercise1LinkMain.addEventListener('click', showExercise1);
+    exercise2LinkMain.addEventListener('click', showExercise2);
+    exercise1LinkToggle.addEventListener('click', showExercise1);
+    exercise2LinkToggle.addEventListener('click', showExercise2);
+    
     // Color Slider: Change background color and show messages
     colorSlider.addEventListener('input', function() {
         const redValue = colorSlider.value;
@@ -43,6 +51,8 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Picture Chooser: Show different sized images based on the button clicked
+    const imageButtons = document.querySelectorAll('.image-btn');
+    const imageContainer = document.getElementById('image-container');
     imageButtons.forEach(function(button) {
         button.addEventListener('click', function() {
             const size = button.getAttribute('data-size');
