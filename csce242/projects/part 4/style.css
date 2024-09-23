@@ -60,7 +60,10 @@ section {
 }
 
 .character-card {
-    display: inline-block; /* Allow the card to be centered */
+    display: flex; /* Use Flexbox */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
     margin: 20px; /* Margin around each card */
     text-align: center;
     border: 1px solid #ddd;
@@ -73,20 +76,32 @@ section {
 /* Add this section to control image sizes */
 .character-card img {
     width: 100%; /* Set image width to fit the card */
-    height: auto; /* Maintain aspect ratio */
-    max-width: 180px; /* Maximum width for better scaling */
+    height: 180px; /* Set a fixed height for all images */
+    object-fit: cover; /* Crop the image to cover the space */
     display: block; /* Block layout for better spacing */
     margin: 0 auto 10px; /* Center the image with margin below */
 }
 .character-details {
-    text-align: center; /* Center the text */
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text within the cards */
     padding: 20px; /* Add padding for spacing */
 }
+
+.popular-characters {
+    display: flex; /* Use Flexbox */
+    justify-content: center; /* Center the characters horizontally */
+    flex-wrap: wrap; /* Allow wrapping if too many cards */
+    gap: 20px; /* Space between cards */
+    padding: 20px; /* Padding around the section */
+}
 .game-list {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 20px;
+    display: flex; /* Use Flexbox */
+    justify-content: center; /* Center the characters horizontally */
+    flex-wrap: wrap; /* Allow wrapping if too many cards */
+    gap: 20px; /* Space between cards */
+    padding: 20px; /* Padding around the section */
 }
 
 .game-card {
@@ -95,23 +110,16 @@ section {
     padding: 15px;
     width: 200px;
     text-align: center;
-}
-.team-members {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    
 }
 
-.team-member {
-    margin: 15px;
-    text-align: center;
-    width: 150px; /* Adjust as necessary */
+.game-card img {
+    width: 100%; /* Makes image fill the width of the card */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 150px; /* Set a max height to prevent overflow */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
 }
 
-.team-member img {
-    width: 100%; /* Makes the image responsive */
-    border-radius: 50%; /* Optional: makes images circular */
-}
 
 footer {
     background-color: var(--primary-color);
