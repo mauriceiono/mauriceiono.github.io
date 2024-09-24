@@ -49,24 +49,7 @@ main {
     color: #c9d1d9; 
 }
 
-/* Assignments section */
-.assignments {
-    margin-top: 20px; /* Same margin as projects */
-}
 
-.assignments h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 2rem;
-    color: #58a6ff; 
-}
-
-/* Assignment cards */
-.assignment-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
-    gap: 20px;
-}
 
 /* Project cards */
 .project-list {
