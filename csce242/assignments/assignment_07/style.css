@@ -1,0 +1,87 @@
+/* Overall page container */
+.container {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    background-color: #eaf2f1; /* Light background */
+    color: #003333; /* Dark text color */
+}
+
+/* Title and Subtitle */
+h1 {
+    color: #336699; /* Blue color */
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #cc6666; /* Red color */
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Drawing section */
+.drawing-section {
+    background-color: #336699; /* Dark teal background */
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+label {
+    color: white;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+input {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: 50px;
+}
+
+button {
+    padding: 5px 10px;
+    margin-left: 10px;
+    border: none;
+    background-color: #cc6666; /* Red button */
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #b34f4f; /* Darker red on hover */
+}
+
+/* Error message */
+.error {
+    color: red;
+    margin-top: 10px;
+}
+
+/* Canvas styling */
+canvas {
+    background-color: black;
+    display: block;
+    margin: 20px auto;
+    border: 2px solid #003333;
+    cursor: pointer;
+}
+
+/* Message when clicking a star */
+.star-message {
+    color: rgb(15, 30, 15);
+    margin-top: 15px;
+    font-size: 16px;
+    display: none;
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    color: #666;
+    font-size: 14px;
+}
