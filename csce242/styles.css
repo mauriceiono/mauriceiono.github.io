@@ -60,9 +60,10 @@ main {
 /* Assignment cards */
 .assignment-list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    grid-template-columns: repeat(3, 1fr); /* Set a fixed 3-column grid */
     gap: 20px;
 }
+
 
 .assignment {
     background-color: #161b22; 
@@ -122,18 +123,19 @@ footer {
 /* Media Queries */
 @media screen and (max-width: 768px) {
     .assignment-list {
-        flex-direction: column; 
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Auto-fit columns based on content */
+        gap: 20px;
     }
+    
 
     .assignment {
-        flex: 1 1 100%;
-        margin-bottom: 20px; 
+        width: 100%; /* Ensure full width for each card */
+        margin: 0 auto; /* Center-align items */
     }
 
     header, main, footer {
         padding-left: 10px;
         padding-right: 10px;
     }
-
-    
 }
