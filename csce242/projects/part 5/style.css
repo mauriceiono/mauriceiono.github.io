@@ -1,8 +1,8 @@
-/* CSS Variables */
 :root {
     --primary-color: #0066cc;     /* Primary color */
     --secondary-color: #ffcc00;   /* Secondary color */
     --background-color: #f0f0f0;  /* Background color */
+    --text-color: #333333;        /* General text color */
 }
 
 /* General Styling */
@@ -12,12 +12,8 @@ body {
     color: var(--text-color);
 }
 
-/* Games Page Specific Background */
-body.games-page {
-    background-color: #e6f7ff; /* Light background for games page */
-}
 
-/* Navigation Bar */
+/* Navigation Bar Styling */
 header {
     background-color: var(--primary-color);
     padding: 15px;
@@ -48,7 +44,7 @@ section {
     margin: 20px;
 }
 
-/* Intro Section */
+/* Main page Section Styling */
 .intro-section {
     background-color: var(--secondary-color);
     border-radius: 8px;
@@ -57,7 +53,7 @@ section {
     text-align: center;
 }
 
-/* Featured Games Section */
+/* Featured Games Section Styling */
 .featured-section {
     background-color: white;
     padding: 20px;
@@ -90,7 +86,7 @@ section {
     transform: scale(1.05);
 }
 
-/* Characters Section */
+/* Characters Section Styling */
 .characters-section {
     background-color: #eef;
     padding: 20px;
@@ -129,65 +125,6 @@ section {
     font-size: 0.9em;
 }
 
-/* Filter Labels and Character Filters */
-.character-filters {
-    text-align: center;
-    margin: 30px auto;
-    padding: 20px;
-    background-color: #e6e6e6;
-    border-radius: 10px;
-}
-
-.filter-label {
-    background-color: #f0f0f0;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 10px 20px;
-    margin: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.filter-label:hover {
-    background-color: var(--primary-color);
-    color: white;
-}
-
-.filter-input:checked + .filter-label {
-    background-color: var(--primary-color);
-    color: white;
-}
-
-/* Hide checkboxes */
-.filter-input {
-    display: none;
-}
-
-/* Character visibility control using CSS */
-.character-card {
-    display: block;
-}
-
-.filter-input:not(:checked) + .filter-label ~ .characters-section .character-grid .character-card {
-    display: none;
-}
-
-/* Show characters based on selected filter */
-#all:checked ~ .characters-section .character-grid .character-card {
-    display: block;
-}
-
-#heroes:checked ~ .characters-section .character-grid .heroes {
-    display: block;
-}
-
-#villains:checked ~ .characters-section .character-grid .villains {
-    display: block;
-}
-
-#sidekicks:checked ~ .characters-section .character-grid .sidekicks {
-    display: block;
-}
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
@@ -261,21 +198,26 @@ footer {
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+/* Centered Content */
 .centered-content {
     max-width: 800px; /* Adjust as needed */
     margin: 0 auto;   /* Centers the container */
     padding: 20px;    /* Adds some padding around the content */
 }
 
+/* Text Alignment */
 h1, h2, p, ul {
     text-align: center; /* Center-aligns text within sections */
 }
+
+/* Form Styling */
 form {
     display: flex;
     flex-direction: column; /* Stacks elements vertically */
     align-items: center;    /* Centers the items horizontally */
 }
 
+/* Input and Button Styles */
 input[type="text"],
 input[type="email"],
 textarea {
@@ -299,15 +241,19 @@ button {
 button:hover {
     background-color: #0056b3; /* Darker button color on hover */
 }
+
+/* Game Section */
 .games, .genres, .recent-releases {
     text-align: center; /* Centering section content */
     padding: 20px;
+    margin: 20px 0; /* Added margin for spacing between sections */
 }
 
 .game-list {
     display: flex; /* Using flexbox for game cards layout */
     flex-wrap: wrap; /* Allowing cards to wrap to the next line */
     justify-content: center; /* Centering cards horizontally */
+    gap: 20px; /* Added gap between cards */
 }
 
 .game-card {
@@ -316,22 +262,24 @@ button:hover {
     border-radius: 8px; /* Rounded corners */
     margin: 15px; /* Spacing between cards */
     padding: 15px; /* Padding inside cards */
-    width: 200px; /* Fixed width for cards */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Slight shadow for depth */
+    width: 220px; /* Slightly adjusted width for better fit */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    transition: transform 0.3s, box-shadow 0.3s; /* Added transition effects */
+}
+
+.game-card:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 
 .game-image {
     max-width: 100%; /* Responsive image size */
     height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Rounded corners for images */
 }
 
-.genre-list, .release-card {
-    margin: 15px 0; /* Margin for list items and release cards */
-}
-
-.release-card {
-    border: 1px solid #ddd; /* Border for release cards */
-    padding: 10px; /* Padding inside release cards */
-    background-color: #f9f9f9; /* Background for release cards */
-    border-radius: 5px; /* Rounded corners */
+.game-description {
+    margin-top: 10px; /* Space between image and description */
+    font-size: 0.9em; /* Smaller font for description */
+    color: var(--text-color); /* Use general text color for consistency */
 }
