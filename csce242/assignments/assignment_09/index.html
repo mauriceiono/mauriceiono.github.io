@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bird Information - A showcase of different bird species and their details.">
+    <title>Bird Information</title>
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Include W3Schools stylesheet for modal styling -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+    <header>
+        <h1>Bird Information Hub</h1>
+        <h2>Explore Different Bird Species</h2>
+    </header>
+
+    <main>
+        <div class="bird-container" id="birdContainer">
+            <!-- Bird cards will be dynamically added here by script.js -->
+        </div>
+    </main>
+
+   <!-- Modal structure for displaying bird details -->
+<div id="birdModal" class="w3-modal">
+    <div class="w3-modal-content w3-card-4 modal-content">
+        <header class="w3-container w3-teal">
+            <span onclick="document.getElementById('birdModal').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+            <h2 id="birdTitle"></h2>
+        </header>
+        <div class="w3-container">
+            <img id="birdImage" src="" alt="">
+            <div class="bird-details">
+                <p id="birdDescription"></p>
+                <p id="birdHabitat"></p>
+                <p id="birdDiet"></p>
+                <p id="birdLifespan"></p>
+                <p id="birdSize"></p> 
+            </div>
+        </div>
+    </div>
+</div>
+
+    <footer>
+        <p>Images from FreeStockPhotos | @mauriceiono.com</p>
+    </footer>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
