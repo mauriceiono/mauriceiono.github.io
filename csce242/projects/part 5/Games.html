@@ -9,8 +9,12 @@
 <body>
     <!-- Header Section with Navigation -->
     <header>
+        <h1 class="site-title">Video Game Character Hub</h1>
         <nav>
-            <ul>
+            <button class="hamburger" aria-label="Toggle navigation">
+                &#9776; <!-- Hamburger icon -->
+            </button>
+            <ul class="nav-list">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="characters.html">Characters</a></li>
                 <li><a href="Games.html">Games</a></li> <!-- Corrected "Games" -->
@@ -18,6 +22,13 @@
             </ul>
         </nav>
     </header>
+    
+    <section class="games-section">
+        <h1>Games</h1>
+        <p class="page-description">
+            Dive into popular games from various genres. Discover new releases, timeless classics, and updates from your favorite franchises.
+        </p>
+    </section>
 
     <!-- Games Section Displaying Popular Games -->
     <section class="games">
@@ -62,20 +73,40 @@
     <!-- Recent Releases Section -->
     <section class="recent-releases">
         <h2>Recent Releases</h2>
-        <div class="release-card">
-            <h3>Tekken 8</h3>
-            <p>Release Date: 2024</p>
-        </div>
-        <div class="release-card">
-            <h3>The Last of Us Part 2 Remastered</h3>
-            <p>Release Date: 2024</p>
-        </div>
-        <div class="release-card">
-            <h3>Palworld</h3>
-            <p>Release Date: 2024</p>
+        <div class="releases-grid">
+            <div class="release-card">
+                <h3>Tekken 8</h3>
+                <img src="https://picsum.photos/200" alt="Tekken 8 Cover" class="release-image">
+                <p>Release Date: 2024</p>
+            </div>
+            <div class="release-card">
+                <h3>The Last of Us Part 2 Remastered</h3>
+                <img src="https://picsum.photos/200" alt="The Last of Us Remastered Cover" class="release-image">
+                <p>Release Date: 2024</p>
+            </div>
+            <div class="release-card">
+                <h3>Palworld</h3>
+                <img src="https://picsum.photos/200" alt="Palworld Cover" class="release-image">
+                <p>Release Date: 2024</p>
+            </div>
+            <div class="release-card">
+                <h3>Starfield</h3>
+                <img src="https://picsum.photos/200" alt="Starfield Cover" class="release-image">
+                <p>Release Date: 2023</p>
+            </div>
+            <div class="release-card">
+                <h3>Cyberpunk 2077: Phantom Liberty</h3>
+                <img src="https://picsum.photos/200" alt="Cyberpunk DLC Cover" class="release-image">
+                <p>Release Date: 2023</p>
+            </div>
+            <div class="release-card">
+                <h3>Spider-Man 2</h3>
+                <img src="https://picsum.photos/200" alt="Spider-Man 2 Cover" class="release-image">
+                <p>Release Date: 2023</p>
+            </div>
         </div>
     </section>
-    
+
     <!-- Footer Navigation Section -->
     <aside id="footer-navigation" class="footer-widget">
         <h3 class="widget-title">Quick Links</h3>
@@ -85,14 +116,24 @@
                 <li class="menu-item"><a href="characters.html">Characters</a></li>
                 <li class="menu-item"><a href="Games.html">Games</a></li> <!-- Corrected "Games" -->
                 <li class="menu-item"><a href="about.html">About Us</a></li>
-                <li class="menu-item"><a href="contact us.html">Contact Us</a></li>
+               
             </ul>
         </div>
     </aside>
     
-    <!-- Footer Section -->
+    <!-- Footer -->
     <footer>
-        <p>&copy; Mauriciono 2024</p>
+        <div class="footer-content">
+            <p>Follow us on:</p>
+            <ul class="social-media">
+                <li><a href="#"><img src="images/ig logo.jpg" alt="Social Media 1"></a></li>
+                <li><a href="#"><img src="images/ig logo.jpg" alt="Social Media 2"></a></li>
+                <li><a href="#"><img src="images/ig logo.jpg" alt="Social Media 3"></a></li>
+            </ul>
+            <p>Video Game Character Hub © 2024. All Rights Reserved.</p>
+        </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

@@ -9,8 +9,12 @@
 <body class="homepage">
     <!-- Navigation Bar -->
     <header>
+        <h1 class="site-title">Video Game Character Hub</h1>
         <nav>
-            <ul>
+            <button class="hamburger" aria-label="Toggle navigation">
+                &#9776; <!-- Hamburger icon -->
+            </button>
+            <ul class="nav-list"> <!-- Added class nav-list -->
                 <li><a href="index.html">Home</a></li>
                 <li><a href="characters.html">Characters</a></li>
                 <li><a href="Games.html">Games</a></li>
@@ -45,26 +49,30 @@
     </section>
 
     <!-- Popular Characters Section -->
-    <section class="characters-section">
-        <h2>Popular Characters</h2>
-        <div class="character-grid">
-            <div class="character-card">
-                <img src="images/mario.jpg" alt="Mario">
-                <h3>Mario</h3>
-                <p>The beloved plumber who saves the Mushroom Kingdom.</p>
-            </div>
-            <div class="character-card">
-                <img src="images/sonic.jpg" alt="Sonic">
-                <h3>Sonic the Hedgehog</h3>
-                <p>The fastest hedgehog who loves adventure.</p>
-            </div>
-            <div class="character-card">
-                <img src="images/link.jpg" alt="Link">
-                <h3>Link</h3>
-                <p>The courageous hero on a quest to save Princess Zelda.</p>
-            </div>
+<section class="characters-section">
+    <h2>Popular Characters</h2>
+    <div class="character-grid">
+        <div class="character-card">
+            <img src="images/mario.jpg" alt="Mario">
+            <h3>Mario</h3>
+            <p>The beloved plumber who saves the Mushroom Kingdom.</p>
+            <a href="character-details.html?character=mario" class="view-details-link">View Details</a> <!-- Added link -->
         </div>
-    </section>
+        <div class="character-card">
+            <img src="images/sonic.jpg" alt="Sonic">
+            <h3>Sonic the Hedgehog</h3>
+            <p>The fastest hedgehog who loves adventure.</p>
+            <a href="character-details.html?character=sonic" class="view-details-link">View Details</a> <!-- Added link -->
+        </div>
+        <div class="character-card">
+            <img src="images/link.jpg" alt="Link">
+            <h3>Link</h3>
+            <p>The courageous hero on a quest to save Princess Zelda.</p>
+            <a href="character-details.html?character=link" class="view-details-link">View Details</a> <!-- Added link -->
+        </div>
+    </div>
+</section>
+
            
 
     <!--  News or Updates section -->
@@ -82,15 +90,25 @@
             <li class="menu-item"><a href="characters.html">Characters</a></li>
             <li class="menu-item"><a href="Games.html">Games</a></li>
             <li class="menu-item"><a href="about.html">About Us</a></li>
-            <li class="menu-item"><a href="contact us.html">Contact Us</a></li>
         </ul>
     </div>
 </aside>
 
     <!-- Footer -->
     <footer>
-        <p>Video Game Character Hub © 2024</p>
+        <div class="footer-content">
+            <p>Follow us on:</p>
+            <ul class="social-media">
+                <li><a href="#"><img src="images/ig logo.jpg" alt="Social Media 1"></a></li>
+                <li><a href="#"><img src="images/ig logo.jpg" alt="Social Media 2"></a></li>
+                <li><a href="#"><img src="images/ig logo.jpg" alt="Social Media 3"></a></li>
+            </ul>
+            <p>Video Game Character Hub © 2024. All Rights Reserved.</p>
+        </div>
     </footer>
+    
+    <script src="script.js"></script>
 
+    
 </body>
 </html>

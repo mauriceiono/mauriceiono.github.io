@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Video Game Character Hub</title>
+    <title>About Us & Contact - Video Game Character Hub</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="about-page">
     <header>
+        <h1 class="site-title">Video Game Character Hub</h1>
         <nav>
-            <ul>
+            <button class="hamburger" aria-label="Toggle navigation">
+                &#9776; <!-- Hamburger icon -->
+            </button>
+            <ul class="nav-list">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="characters.html">Characters</a></li>
                 <li><a href="Games.html">Games</a></li>
@@ -18,52 +22,104 @@
         </nav>
     </header>
 
-    <main class="centered-content">
-        <section class="about-intro">
-            <h1>About Video Game Character Hub</h1>
-            <p>This website is dedicated to providing information on video game characters. Whether you are a casual gamer or a hardcore enthusiast, this platform is here to enhance your knowledge of your favorite characters.</p>
-        </section>
+   <!-- About Section with Grid Layout -->
+<section class="about-section">
+    <div class="about-column">
+        <h2>About Video Game Character Hub</h2>
+        <p>This website is dedicated to providing information on video game characters. Whether you are a casual gamer or a hardcore enthusiast, this platform is here to enhance your knowledge of your favorite characters.</p>
+        
+        <h2>My Mission</h2>
+        <p>My aim is to become a comprehensive resource for all things related to video game characters. My goal is to share in-depth profiles, backstories, and trivia that bring these characters to life.</p>
+    </div>
 
-        <section class="mission">
-            <h2>My Mission</h2>
-            <p>My aim to become a comprehensive resource for all things related to video game characters. My goal is to share in-depth profiles, backstories, and trivia that bring these characters to life.</p>
-        </section>
+    <div class="about-column">
+        <h2>Why Video Games?</h2>
+        <ul>
+            <li>To celebrate iconic characters who have shaped gaming culture.</li>
+            <li>To educate gamers about their favorite heroes and villains.</li>
+            <li>To provide a community for fans to discuss and share their passion.</li>
+        </ul>
 
-        <section class="why-video-games">
-            <h2>Why Video Games?</h2>
-            <ul>
-                <li>To celebrate iconic characters who have shaped gaming culture.</li>
-                <li>To educate gamers about their favorite heroes and villains.</li>
-                <li>To provide a community for fans to discuss and share their passion.</li>
-            </ul>
-        </section>
-
-        <section class="get-involved">
-            <h2>Get Involved!</h2>
-            <p>If you are a fan of video games and have something to share, I invite you to join our community! You can contribute by:</p>
-            <ul>
-                <li>Submitting character profiles</li>
-                <li>Participating in discussions</li>
-                <li>Sharing your favorite game-related content</li>
-            </ul>
-            <p>Contact us via our <a href="contact us.html">Contact Us</a> page for more details!</p>
-        </section>
-    </main>
-<!-- Footer Navigation Section -->
-<aside id="footer-navigation" class="footer-widget">
-    <h3 class="widget-title">Quick Links</h3>
-    <div class="menu-footer-container">
-        <ul class="menu">
-            <li class="menu-item"><a href="index.html">Home</a></li>
-            <li class="menu-item"><a href="characters.html">Characters</a></li>
-            <li class="menu-item"><a href="Games.html">Games</a></li>
-            <li class="menu-item"><a href="about.html">About Us</a></li>
-            <li class="menu-item"><a href="contact us.html">Contact Us</a></li>
+        <h2>Get Involved!</h2>
+        <p>If you are a fan of video games and have something to share, I invite you to join our community! You can contribute by:</p>
+        <ul>
+            <li>Submitting character profiles</li>
+            <li>Participating in discussions</li>
+            <li>Sharing your favorite game-related content</li>
         </ul>
     </div>
-</aside>
+</section>
+
+
+        <!-- Contact Section -->
+        <section class="contact-section">
+            <h1>Contact Us</h1>
+            <p>If you have any questions or comments, feel free to reach out to us!</p>
+
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+
+            <section class="contact-info">
+                <h2>Contact Information</h2>
+                <ul>
+                    <li><strong>Email:</strong> mthooks@email.sc.edu</li>
+                    <li><strong>Phone:</strong> (803) 238-6146</li>
+                    <li><strong>Address:</strong> 123 Gaming Lane, Game City, GA 12345</li>
+                </ul>
+            </section>
+
+            <section class="feedback-section">
+                <h2>Feedback</h2>
+                <p>We would love to hear your thoughts on our website and any suggestions you may have!</p>
+                <form action="#" method="post">
+                    <label for="feedback-name">Name:</label>
+                    <input type="text" id="feedback-name" name="feedback-name" required>
+
+                    <label for="feedback">Your Feedback:</label>
+                    <textarea id="feedback" name="feedback" required></textarea>
+
+                    <button type="submit">Send Feedback</button>
+                </form>
+            </section>
+        </section>
+    </main>
+    
+    <!-- Footer Navigation Section -->
+    <aside id="footer-navigation" class="footer-widget">
+        <h3 class="widget-title">Quick Links</h3>
+        <div class="menu-footer-container">
+            <ul class="menu">
+                <li class="menu-item"><a href="index.html">Home</a></li>
+                <li class="menu-item"><a href="characters.html">Characters</a></li>
+                <li class="menu-item"><a href="Games.html">Games</a></li>
+                <li class="menu-item"><a href="about.html">About Us</a></li>
+            </ul>
+        </div>
+    </aside>
+
+    <!-- Footer -->
     <footer>
-        <p>Mauriciono © 2024</p>
+        <div class="footer-content">
+            <p>Follow us on:</p>
+            <ul class="social-media">
+                <li><a href="#"><img src="images/ig logo.jpg" alt="Social Media 1"></a></li>
+                <li><a href="#"><img src="images/ig logo.jpg" alt="Social Media 2"></a></li>
+                <li><a href="#"><img src="images/ig logo.jpg" alt="Social Media 3"></a></li>
+            </ul>
+            <p>Video Game Character Hub © 2024. All Rights Reserved.</p>
+        </div>
     </footer>
+    <script src="script.js"></script>
+
 </body>
 </html>

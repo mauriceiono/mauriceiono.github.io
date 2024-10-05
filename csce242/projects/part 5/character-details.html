@@ -10,8 +10,12 @@
 
     <!-- Navigation Bar -->
     <header>
+        <h1 class="site-title">Video Game Character Hub</h1>
         <nav>
-            <ul>
+            <button class="hamburger" aria-label="Toggle navigation">
+                &#9776; <!-- Hamburger icon -->
+            </button>
+            <ul class="nav-list">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="characters.html">Characters</a></li>
                 <li><a href="Games.html">Games</a></li>
@@ -23,83 +27,36 @@
     <!-- Character Details Section -->
     <section class="character-details">
         <h1>Character Details</h1>
-
-        <!-- Updated character card structure for better layout -->
-        <div class="character-cards-container">
-            <!-- Master Chief -->
-            <div class="character-card">
-                <div class="character-image">
-                    <img src="../part 3/images/master chief.jpg" alt="Master Chief">
-                </div>
-                <div class="character-info">
-                    <h2>Master Chief</h2>
-                    <p><strong>Game:</strong> Halo</p>
-                    <p><strong>Description:</strong> A super soldier dedicated to saving humanity.</p>
-                    <p><strong>Abilities:</strong> Super strength, advanced combat skills, and tactical intelligence.</p>
-                    <p><strong>Trivia:</strong> Known for his iconic green armor and helmet.</p>
-                </div>
-            </div>
-
-            <!-- Mario -->
-            <div class="character-card">
-                <div class="character-image">
-                    <img src="../part 3/images/mario.jpg" alt="Mario">
-                </div>
-                <div class="character-info">
-                    <h2>Mario</h2>
-                    <p><strong>Game:</strong> Super Mario</p>
-                    <p><strong>Description:</strong> A plumber who goes on adventures to rescue Princess Peach.</p>
-                    <p><strong>Abilities:</strong> Superhuman agility, jumping, and power-ups like Fire Flower.</p>
-                    <p><strong>Trivia:</strong> His first appearance was in the 1981 arcade game Donkey Kong.</p>
-                </div>
-            </div>
-
-            <!-- Sonic -->
-            <div class="character-card">
-                <div class="character-image">
-                    <img src="../part 3/images/sonic.jpg" alt="Sonic">
-                </div>
-                <div class="character-info">
-                    <h2>Sonic the Hedgehog</h2>
-                    <p><strong>Game:</strong> Sonic the Hedgehog</p>
-                    <p><strong>Description:</strong> A speedy blue hedgehog on a quest to stop Dr. Robotnik.</p>
-                    <p><strong>Abilities:</strong> Super speed, agility, and spin attacks.</p>
-                    <p><strong>Trivia:</strong> Sonic’s original design was based on a mix of a hedgehog and an armadillo.</p>
-                </div>
-            </div>
-
-            <!-- Link -->
-            <div class="character-card">
-                <div class="character-image">
-                    <img src="../part 3/images/link.jpg" alt="Link">
-                </div>
-                <div class="character-info">
-                    <h2>Link</h2>
-                    <p><strong>Game:</strong> The Legend of Zelda</p>
-                    <p><strong>Description:</strong> A hero tasked with rescuing Princess Zelda and defeating Ganon.</p>
-                    <p><strong>Abilities:</strong> Mastery of various weapons, puzzle-solving, and magic.</p>
-                    <p><strong>Trivia:</strong> Link is often mistaken for Zelda, but he is the hero of the series.</p>
-                </div>
-            </div>
+        <div class="character-info" id="character-info">
+            <!-- Character details will be inserted here -->
         </div>
     </section>
-<!-- Footer Navigation Section -->
-<aside id="footer-navigation" class="footer-widget">
-    <h3 class="widget-title">Quick Links</h3>
-    <div class="menu-footer-container">
-        <ul class="menu">
-            <li class="menu-item"><a href="index.html">Home</a></li>
-            <li class="menu-item"><a href="characters.html">Characters</a></li>
-            <li class="menu-item"><a href="Games.html">Games</a></li>
-            <li class="menu-item"><a href="about.html">About Us</a></li>
-            <li class="menu-item"><a href="contact us.html">Contact Us</a></li>
-        </ul>
-    </div>
-</aside>
-    <!-- Footer -->
-    <footer>
-        <p>Video Game Character Hub © 2024</p>
-    </footer>
 
+    <!-- Footer Navigation Section -->
+    <aside id="footer-navigation" class="footer-widget">
+        <h3 class="widget-title">Quick Links</h3>
+        <div class="menu-footer-container">
+            <ul class="menu">
+                <li class="menu-item"><a href="index.html">Home</a></li>
+                <li class="menu-item"><a href="characters.html">Characters</a></li>
+                <li class="menu-item"><a href="Games.html">Games</a></li>
+                <li class="menu-item"><a href="about.html">About Us</a></li>
+            </ul>
+        </div>
+    </aside>
+ <!-- Footer -->
+ <footer>
+    <div class="footer-content">
+        <p>Follow us on:</p>
+        <ul class="social-media">
+            <li><a href="#"><img src="images/ig logo.jpg" alt="Social Media 1"></a></li>
+            <li><a href="#"><img src="images/ig logo.jpg" alt="Social Media 1"></a></li>
+            <li><a href="#"><img src="images/ig logo.jpg" alt="Social Media 1"></a></li>
+        </ul>
+        <p>Video Game Character Hub © 2024. All Rights Reserved.</p>
+    </div>
+</footer>
+    
+    <script src="script.js"></script>
 </body>
 </html>
