@@ -345,6 +345,12 @@ button:hover {
     display: flex; /* Make the release-card a flex container */
     flex-direction: column; /* Stack content vertically */
     justify-content: space-between; /* Evenly space content */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /
+}
+
+.release-card:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 
 .release-card img {
