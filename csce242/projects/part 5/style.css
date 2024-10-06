@@ -386,12 +386,13 @@ button:hover {
 
 /* Hamburger Menu Styling */
 .hamburger {
-    display: none; /* Hide by default */
-    background: none; /* No background */
-    border: none; /* No border */
-    color: white; /* Icon color */
-    font-size: 2rem; /* Size of the icon */
-    cursor: pointer; /* Pointer cursor on hover */
+    display: none; /* Hide on larger screens */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10; /* Ensure the hamburger icon stays on top */
 }
 
 /* Navigation List Styling */
@@ -403,29 +404,35 @@ button:hover {
     justify-content: center;
 }
 
-/* Media Queries for Hamburger Menu */
+.nav-list.active {
+    display: flex; /* Show menu when active */
+    padding: 10px 0;
+    transition: height 0.3s ease; /* Smooth height transition */
+}
+
 @media (max-width: 768px) {
     .hamburger {
-        display: block; /* Show the hamburger icon */
+        display: block; /* Show hamburger on smaller screens */
+    }
+
+    header nav ul {
+        display: none; /* Hide full menu */
     }
 
     .nav-list {
-        display: none; /* Hide the nav list by default */
-        flex-direction: column; /* Stack items vertically */
-        position: absolute; /* Position it absolutely */
-        top: 60px; /* Position it below the header */
-        left: 0; /* Align to the left */
-        width: 100%; /* Full width */
-        background-color: var(--primary-color); /* Background color */
+        display: none; /* Hidden by default */
     }
 
     .nav-list.active {
-        display: flex; /* Show when active */
+        display: flex; /* Show menu when active */
+        flex-direction: column; /* Stack items vertically */
     }
 
     header nav ul li {
-        margin: 10px 0; /* Space between items in mobile */
-        text-align: center; /* Center-align text */
+        margin: 10px 0; /* Space between items for mobile layout */
+        text-align: center;
     }
 }
+
+
 

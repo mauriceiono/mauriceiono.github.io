@@ -1,9 +1,15 @@
 const hamburger = document.querySelector('.hamburger');
 const navList = document.querySelector('.nav-list');
 
+// Toggle the menu and update aria-expanded attribute
 hamburger.addEventListener('click', () => {
-    navList.classList.toggle('active'); // Toggle the active class
+    const isActive = navList.classList.toggle('active');
+    hamburger.setAttribute('aria-expanded', isActive);
 });
+
+// Set initial aria-expanded state
+hamburger.setAttribute('aria-expanded', 'false');
+
 
 // Character details data
 const characterDetails = {
