@@ -117,3 +117,4 @@ function displayCharacterDetails() {
 
 // Call the function on page load
 document.addEventListener('DOMContentLoaded', displayCharacterDetails);
+
