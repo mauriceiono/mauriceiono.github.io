@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="characters-page">
+
+    <!-- Navigation Bar -->
+    <header>
+        <h1 class="site-title">Video Game Character Hub</h1>
+        <nav>
+            <button class="hamburger" aria-label="Toggle navigation">
+                &#9776; <!-- Hamburger icon -->
+            </button>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="characters.html">Characters</a></li>
+                <li><a href="Games.html">Games</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="characters-section">
+        <h1>Video Game Characters</h1>
+        <p class="page-description">
+            Explore iconic video game characters across different universes. Click on any character to learn more about their abilities, background, and role in their game.
+        </p>
+    </section>
+        
+    <!-- Popular Characters Section -->
+<section class="characters-section">
+    <h2>Characters</h2>
+    <div class="character-grid">
+        <!-- Each character card -->
+        <div class="character-card" data-character="mario">
+            <img src="images/mario.jpg" alt="Mario">
+            <h3>Mario</h3>
+            <p>The beloved plumber who saves the Mushroom Kingdom.</p>
+            <a href="character-details.html?character=mario" class="view-details-btn">View Details</a>
+        </div>
+
+        <div class="character-card" data-character="sonic">
+            <img src="images/sonic.jpg" alt="Sonic">
+            <h3>Sonic the Hedgehog</h3>
+            <p>The fastest hedgehog who loves adventure.</p>
+            <a href="character-details.html?character=sonic" class="view-details-btn">View Details</a>
+        </div>
+
+        <div class="character-card" data-character="link">
+            <img src="images/link.jpg" alt="Link">
+            <h3>Link</h3>
+            <p>The courageous hero on a quest to save Princess Zelda.</p>
+            <a href="character-details.html?character=link" class="view-details-btn">View Details</a>
+        </div>
+
+        <div class="character-card" data-character="bowser">
+            <img src="images/bowser.jpg" alt="Bowser">
+            <h3>Bowser</h3>
+            <p>The main antagonist of the Mario series.</p>
+            <a href="character-details.html?character=bowser" class="view-details-btn">View Details</a>
+        </div>
+
+        <div class="character-card" data-character="eggman">
+            <img src="images/eggman.jpg" alt="Dr. Eggman">
+            <h3>Dr. Eggman</h3>
+            <p>Sonic’s arch-nemesis with a love for robotics.</p>
+            <a href="character-details.html?character=eggman" class="view-details-btn">View Details</a>
+        </div>
+
+        <div class="character-card" data-character="ganondorf">
+            <img src="images/ganondorf.jpg" alt="Ganondorf">
+            <h3>Ganondorf</h3>
+            <p>Link's arch nemesis.</p>
+            <a href="character-details.html?character=ganondorf" class="view-details-btn">View Details</a>
+        </div>
+
+        <div class="character-card" data-character="luigi">
+            <img src="images/luigi.jpg" alt="Luigi">
+            <h3>Luigi</h3>
+            <p>Mario’s younger brother and loyal companion.</p>
+            <a href="character-details.html?character=luigi" class="view-details-btn">View Details</a>
+        </div>
+
+        <div class="character-card" data-character="tails">
+            <img src="images/tails.jpg" alt="Tails">
+            <h3>Miles "Tails" Prower</h3>
+            <p>Sonic’s two-tailed fox friend and tech genius.</p>
+            <a href="character-details.html?character=tails" class="view-details-btn">View Details</a>
+        </div>
+
+        <div class="character-card" data-character="fi">
+            <img src="images/fi zelda.jpg" alt="Fi">
+            <h3>Fi</h3>
+            <p>The spirit of the Master Sword which Link wields.</p>
+            <a href="character-details.html?character=fi" class="view-details-btn">View Details</a>
+        </div>
+    </div>
+</section>
+
+    
+    <!-- Footer Navigation Section -->
+    <aside id="footer-navigation" class="footer-widget">
+        <h3 class="widget-title">Quick Links</h3>
+        <div class="menu-footer-container">
+            <ul class="menu">
+                <li class="menu-item"><a href="index.html">Home</a></li>
+                <li class="menu-item"><a href="characters.html">Characters</a></li>
+                <li class="menu-item"><a href="Games.html">Games</a></li>
+                <li class="menu-item"><a href="about.html">About Us</a></li>
+            </ul>
+        </div>
+    </aside>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>Follow us on:</p>
+            <ul class="social-media">
+                <li><a href="#"><img src="images/ig logo.jpg" alt="Social Media 1"></a></li>
+                <li><a href="#"><img src="images/x.jpg" alt="Social Media 2"></a></li>
+                <li><a href="#"><img src="images/face.jpg" alt="Social Media 3"></a></li>
+            </ul>
+            <p>Video Game Character Hub © 2024. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
