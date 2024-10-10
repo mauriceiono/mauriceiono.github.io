@@ -14,7 +14,8 @@ body {
   }
   
   .ice-cream-grid {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Creates 3 equal columns */;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
@@ -23,7 +24,7 @@ body {
   
   .ice-cream-item {
     position: relative;
-    width: 200px;
+    width: 300px;
     height: 200px;
     overflow: hidden;
     border-radius: 10px;

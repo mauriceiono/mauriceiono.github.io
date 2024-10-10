@@ -10,7 +10,7 @@ body {
     gap: 20px; /* Adds space between images */
     justify-items: center; /* Centers items horizontally in each grid cell */
     margin: 20px auto;
-    max-width: 900px; /* Optional: Restrict grid width */
+    max-width: 900px; 
   }
   
   .image-item {
