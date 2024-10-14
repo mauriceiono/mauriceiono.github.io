@@ -10,88 +10,36 @@ hamburger.addEventListener('click', () => {
 // Set initial aria-expanded state
 hamburger.setAttribute('aria-expanded', 'false');
 
+// Function to fetch character details from the JSON file
+function fetchCharacterDetails() {
+    return fetch('characters.json')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Failed to fetch character data');
+            }
+            return response.json();
+        })
+        .catch(error => {
+            console.error('Error fetching character details:', error);
+            return null; // Return null on error
+        });
+}
 
-// Character details data
-const characterDetails = {
-    mario: {
-        name: "Mario",
-        game: "Super Mario",
-        description: "A plumber who goes on adventures to rescue Princess Peach.",
-        abilities: "Superhuman agility, jumping, and power-ups like Fire Flower.",
-        trivia: "His first appearance was in the 1981 arcade game Donkey Kong.",
-        image: "../part 3/images/mario.jpg"
-    },
-    sonic: {
-        name: "Sonic the Hedgehog",
-        game: "Sonic the Hedgehog",
-        description: "A speedy blue hedgehog on a quest to stop Dr. Robotnik.",
-        abilities: "Super speed, agility, and spin attacks.",
-        trivia: "Sonic’s original design was based on a mix of a hedgehog and an armadillo.",
-        image: "../part 3/images/sonic.jpg"
-    },
-    link: {
-        name: "Link",
-        game: "The Legend of Zelda",
-        description: "A hero tasked with rescuing Princess Zelda and defeating Ganon.",
-        abilities: "Mastery of various weapons, puzzle-solving, and magic.",
-        trivia: "Link is often mistaken for Zelda, but he is the hero of the series.",
-        image: "../part 3/images/link.jpg"
-    },
-    bowser: {
-        name: "Bowser",
-        game: "Super Mario",
-        description: "The king of the Koopas and a constant threat to Mario.",
-        abilities: "Fire breathing, immense strength, and magical powers.",
-        trivia: "Bowser has been the main antagonist in the Mario series since 1985.",
-        image: "images/bowser.jpg"
-    },
-    eggman: {
-        name: "Dr. Eggman",
-        game: "Sonic the Hedgehog",
-        description: "A genius inventor and the main antagonist in the Sonic series.",
-        abilities: "Mastery of robotics and engineering, along with intelligence.",
-        trivia: "Eggman’s real name is Dr. Ivo Robotnik.",
-        image: "images/eggman.jpg"
-    },
-    ganondorf: {
-        name: "Ganondorf",
-        game: "The Legend of Zelda",
-        description: "The primary antagonist of the series, seeking power through the Triforce.",
-        abilities: "Dark magic and combat skills.",
-        trivia: "Ganondorf is the Gerudo king and the human form of Ganon.",
-        image: "images/ganondorf.jpg"
-    },
-    luigi: {
-        name: "Luigi",
-        game: "Super Mario",
-        description: "Mario's younger brother, known for his green outfit.",
-        abilities: "Similar to Mario but with a unique jump and abilities.",
-        trivia: "Luigi first appeared in 1983 in the arcade game Mario Bros.",
-        image: "images/luigi.jpg"
-    },
-    tails: {
-        name: "Tails",
-        game: "Sonic the Hedgehog",
-        description: "Sonic’s sidekick with twin tails that allow him to fly.",
-        abilities: "Flight and mechanical skills.",
-        trivia: "Tails was first introduced in Sonic the Hedgehog 2 in 1992.",
-        image: "images/tails.jpg"
-    },
-    fi: {
-        name: "Fi",
-        game: "The Legend of Zelda: Skyward Sword",
-        description: "The spirit of the Master Sword, aiding Link in his journey.",
-        abilities: "Can analyze enemies and give Link information.",
-        trivia: "Fi has a calm and emotionless demeanor, unlike many characters.",
-        image: "images/fi zelda.jpg"
-    },
-};
 
 // Function to display character details
-function displayCharacterDetails() {
+async function displayCharacterDetails() {
+    // Fetch the character details from the JSON file
+    const characterDetails = await fetchCharacterDetails();
+    
+    if (!characterDetails) {
+        document.getElementById('character-info').innerHTML = `<p>Failed to load character details.</p>`;
+        return;
+    }
+
     // Get the character from the URL
     const urlParams = new URLSearchParams(window.location.search);
-    const character = urlParams.get('character');
+    const character = urlParams.get('character')?.toLowerCase();
+
 
     // Find the character details
     const details = characterDetails[character];
@@ -117,4 +65,3 @@ function displayCharacterDetails() {
 
 // Call the function on page load
 document.addEventListener('DOMContentLoaded', displayCharacterDetails);
-
