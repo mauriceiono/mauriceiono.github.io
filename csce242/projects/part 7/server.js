@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
 app.post('/send', async (req, res) => {
     const { name, email, message } = req.body;
 
-    // Configure your Outlook transporter
+    // Configure Outlook transporter
     let transporter = nodemailer.createTransport({
         service: 'Outlook365', 
         auth: {
@@ -41,10 +41,10 @@ app.post('/send', async (req, res) => {
     try {
         // Attempt to send the email
         let info = await transporter.sendMail(mailOptions);
-        console.log("Email sent successfully! Message ID:", info.messageId);  // Log the message ID for reference
+        console.log("Email sent successfully! Message ID:", info.messageId);  
         res.json({ status: 'success', message: 'Email sent successfully!' });
     } catch (error) {
-        console.error("Error sending email:", error);  // Log detailed error message
+        console.error("Error sending email:", error);  
         res.json({ status: 'error', message: 'Email could not be sent.' });
     }a
 });
