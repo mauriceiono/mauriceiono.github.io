@@ -1,6 +1,5 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const nodemailer = require('nodemailer');
 const path = require('path');
 
 const app = express();
@@ -22,33 +21,37 @@ app.get('/', (req, res) => {
 app.post('/send', async (req, res) => {
     const { name, email, message } = req.body;
 
-    // Configure Outlook transporter
-    let transporter = nodemailer.createTransport({
-        service: 'Outlook365', 
-        auth: {
-            user: 'mthooks@email.sc.edu',
-            pass: 'Journey09067' 
-        }
+    // Prepare the data to send to Web3Forms
+    const json = JSON.stringify({
+        name,
+        email,
+        message,
+        access_key: '1a115c8c-ffcc-41cf-973b-be26c8c56204' // Replace with your actual access key
     });
 
-    const mailOptions = {
-        from: 'mthooks@email.sc.edu',
-        to: 'mthooks@email.sc.edu',
-        subject: `New message from ${name}`,
-        text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
-    };
-
     try {
-        // Attempt to send the email
-        let info = await transporter.sendMail(mailOptions);
-        console.log("Email sent successfully! Message ID:", info.messageId);  
-        res.json({ status: 'success', message: 'Email sent successfully!' });
-    } catch (error) {
-        console.error("Error sending email:", error);  
-        res.json({ status: 'error', message: 'Email could not be sent.' });
-    }a
-});
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json"
+            },
+            body: json
+        });
 
+        // Check if the response is successful
+        if (response.ok) {
+            console.log("Email sent successfully!");
+            res.json({ status: 'success', message: 'Email sent successfully!' });
+        } else {
+            console.error("Error sending email:", response.statusText);
+            res.json({ status: 'error', message: 'Email could not be sent.' });
+        }
+    } catch (error) {
+        console.error("Error sending email:", error);
+        res.json({ status: 'error', message: 'Email could not be sent.' });
+    }
+});
 
 // Start the server
 app.listen(PORT, () => {
