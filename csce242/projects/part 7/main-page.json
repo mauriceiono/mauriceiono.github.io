@@ -1,0 +1,24 @@
+[
+    {
+      "id": "mario",
+      "name": "Mario",
+      "image": "images/mario.jpg",
+      "description": "The beloved plumber who saves the Mushroom Kingdom.",
+      "detailsLink": "character-details.html?character=mario"
+    },
+    {
+      "id": "sonic",
+      "name": "Sonic",
+      "image": "images/sonic.jpg",
+      "description": "The fastest hedgehog who loves adventure.",
+      "detailsLink": "character-details.html?character=sonic"
+    },
+    {
+      "id": "link",
+      "name": "Link",
+      "image": "images/link.jpg",
+      "description": "The courageous hero on a quest to save Princess Zelda.",
+      "detailsLink": "character-details.html?character=link"
+    }
+  ]
+  
