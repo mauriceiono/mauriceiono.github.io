@@ -16,42 +16,36 @@ const contactForm = document.querySelector('.contact-form form');
 
 if (contactForm) {
     contactForm.addEventListener('submit', async (event) => {
-        event.preventDefault(); // Prevent form from reloading the page
-
-        // Clear any existing messages
-        let messageElement = document.querySelector('.form-message');
-        if (messageElement) messageElement.remove();
-
-        // Get form data
-        const formData = new FormData(contactForm);
-        const formObject = Object.fromEntries(formData.entries());
+        event.preventDefault();
+        
+        const formData = {
+            name: contactForm.querySelector('input[name="name"]').value,
+            email: contactForm.querySelector('input[name="email"]').value,
+            message: contactForm.querySelector('textarea[name="message"]').value,
+            access_key: '1a115c8c-ffcc-41cf-973b-be26c8c56204' // Web3Forms access key
+        };
 
         try {
-            // Send the form data to the server
-            const response = await fetch('/send', {
-                method: 'POST',
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
                 headers: {
-                    'Content-Type': 'application/json',
+                    "Content-Type": "application/json"
                 },
-                body: JSON.stringify(formObject),
+                body: JSON.stringify(formData)
             });
 
-            const result = await response.json();
-
             if (response.ok) {
-                // Add a success message
-                showFormMessage('Thank you! Your message has been successfully submitted.', 'success');
+                alert('Thank you! Your message has been sent.');
             } else {
-                // Add an error message from the server response
-                showFormMessage(result.message || 'Sorry, something went wrong. Please try again.', 'error');
+                alert('Sorry, something went wrong. Please try again.');
             }
         } catch (error) {
-            // Add an error message
-            showFormMessage('Sorry, something went wrong. Please try again.', 'error');
+            alert('Error: Please check your connection and try again.');
             console.error('Error submitting form:', error);
         }
     });
 }
+
 
 
 // Function to show success or error messages

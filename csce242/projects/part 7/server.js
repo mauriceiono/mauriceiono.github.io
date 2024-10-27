@@ -26,7 +26,7 @@ app.post('/send', async (req, res) => {
         name,
         email,
         message,
-        access_key: '1a115c8c-ffcc-41cf-973b-be26c8c56204' // Replace with your actual access key
+        access_key: '1a115c8c-ffcc-41cf-973b-be26c8c56204' 
     });
 
     try {
