@@ -448,6 +448,7 @@ button:hover {
 
     .nav-list {
         display: none; /* Hidden by default */
+        overflow: hidden;
     }
 
     .nav-list.active {
